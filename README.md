@@ -8,7 +8,9 @@ Each profile is a named snapshot of your current Noctalia configuration: color s
 
 ![Preview](preview.png)
 
-<video src="assets/changes_preview_video.mp4" controls width="100%"></video>
+
+https://github.com/user-attachments/assets/bb735a38-15a5-4e46-bef5-97a2da4cbdae
+
 
 ---
 
