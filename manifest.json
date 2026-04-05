@@ -5,7 +5,7 @@
   "minNoctaliaVersion": "4.6.6",
   "author": "Archlexx",
   "license": "MIT",
-  "repository": "https://github.com/Archlexx/shell-profiles",
+  "repository": "https://github.com/Archlexx/noctalia-profile-manager",
   "description": "Save, load, and manage Noctalia configuration profiles.",
   "tags": ["Bar", "Theming", "Utility", "Panel"],
   "entryPoints": {
