@@ -1,74 +1,43 @@
-# Profiles
+# 🗂️ Profile manager for Noctalia
 
-A [Noctalia](https://github.com/noctalia-dev/noctalia-shell) plugin for saving, loading, and managing shell configuration profiles.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Noctalia Version](https://img.shields.io/badge/Noctalia-Plugin-orange)](https://github.com/noctalia-dev/noctalia-shell)
+![Languages](https://img.shields.io/badge/Languages-12-blue)
 
-Each profile is a named snapshot of your current Noctalia configuration: color scheme, settings, plugin state, and optionally wallpapers. Apply any profile in one click to switch your entire environment instantly.
+A powerful plugin for [Noctalia](https://github.com/noctalia-dev/noctalia-shell) to save, load, and manage your entire desktop configuration snapshots. Switch between setups, colors, and wallpapers in a single click.
 
----
-
-![Preview](preview.png)
-
+### 📺 Video Demo
 
 https://github.com/user-attachments/assets/bb735a38-15a5-4e46-bef5-97a2da4cbdae
 
+---
+
+## ✨ Features
+
+- **Save profiles** — Snapshot `settings.json`, `colors.json`, `plugins.json`, and wallpapers.
+- **Apply profiles** — Restore a full configuration instantly.
+- **Active indicator** — Visual feedback (accent bar + check icon) for the current profile.
+- **Auto-backup** — Safety first! Current config is backed up before applying new ones.
+- **Search** — Real-time filtering by profile name.
+- **IPC Support** — Fully scriptable via `qs ipc`.
+- **i18n** — Support for 12 languages out of the box.
 
 ---
 
-## Included profiles
+## 🎨 Included Profiles
 
-### Caelestia
-Light theme with soft blue tones and a minimalist snowy mountain wallpaper. Based on Caelestia-Shell.
-
-![Caelestia](assets/profiles/Caelestia/preview.png)
-
-### Darklestia
-Dark theme with bold red accents and an edgy artistic wallpaper.
-
-![Darklestia](assets/profiles/Darklestia/preview.png)
-
-### Demon
-Vivid red dark theme inspired by oni/demon aesthetics.
-
-![Demon](assets/profiles/Demon/preview.png)
-
-### MacOS
-macOS-style layout with a bottom dock and a colorful purple-pink gradient wallpaper.
-
-![MacOS](assets/profiles/MacOS/preview.png)
-
-### MacOS Dark
-Dark variant of the macOS-inspired theme.
-
-![MacOS Dark](<assets/profiles/MacOS Dark/preview.png>)
-
-### Windows 26
-Dark theme with golden accents and a Windows 11-style taskbar layout.
-
-![Windows 26](<assets/profiles/Windows 26/preview.png>)
+| **Caelestia** | **Darklestia** | **Demon** |
+| :---: | :---: | :---: |
+| ![Caelestia](assets/profiles/Caelestia/preview.png) | ![Darklestia](assets/profiles/Darklestia/preview.png) | ![Demon](assets/profiles/Demon/preview.png) |
+| **MacOS** | **MacOS Dark** | **Windows 26** |
+| ![MacOS](assets/profiles/MacOS/preview.png) | ![MacOS Dark](<assets/profiles/MacOS Dark/preview.png>) | ![Windows 26](<assets/profiles/Windows 26/preview.png>) |
 
 ---
 
-## Features
+## 🛠️ Installation
 
-- **Save profiles** — Snapshot `settings.json`, `colors.json`, `plugins.json`, and wallpapers into a named directory.
-- **Apply profiles** — Restore a full configuration in one click.
-- **Active profile indicator** — The last applied profile is marked with a colored accent bar and a check icon.
-- **Saved-on date** — Each profile shows the date and time it was last saved.
-- **Search** — Filter the profile list by name in real time.
-- **Per-profile wallpaper toggle** — Each row has an independent toggle to include or exclude wallpapers when applying.
-- **Auto-backup** — Before every apply, the current configuration is automatically saved to `_backups/<timestamp>/`. Backups are pruned to a configurable maximum.
-- **Rename** — Rename any profile with Enter-key support.
-- **Delete with confirmation** — A modal dialog prevents accidental deletions.
-- **IPC support** — Control the plugin from scripts or keybinds.
-- **Customizable bar icon** — Choose any Tabler icon and accent color from settings.
-- **i18n** — 12 languages included (see table below).
-
----
-
-## Installation
-
-1. Copy this folder to `~/.config/noctalia/plugins/shell-profiles/`.
-2. Add the plugin to `~/.config/noctalia/plugins.json`:
+1. Clone this repo: git clone [https://github.com/Archlexx/noctalia-profile-manager.git](https://github.com/Archlexx/noctalia-profile-manager.git) ~/.config/noctalia/plugins/shell-profiles
+2. Enable the plugin to `~/.config/noctalia/plugins.json`:
 
 ```json
 {
@@ -82,7 +51,7 @@ Dark theme with golden accents and a Windows 11-style taskbar layout.
 
 ---
 
-## Settings
+## ⚙️ Settings
 
 | Setting | Default | Description |
 |---|---|---|
@@ -118,7 +87,7 @@ Profiles whose folder name starts with `_` or `.` are hidden from the list.
 
 ---
 
-## IPC
+## ⌨️ IPC
 
 Send commands to the plugin from a script or keybind:
 
@@ -172,7 +141,7 @@ bindsym $mod+Shift+F1 exec qs ipc call plugin:shell-profiles applyProfile 'my-pr
 
 ---
 
-## Languages
+## 🌍 Languages
 
 | Code | Language |
 |------|----------|
@@ -190,6 +159,6 @@ bindsym $mod+Shift+F1 exec qs ipc call plugin:shell-profiles applyProfile 'my-pr
 | `uk-UA` | Ukrainian |
 
 ---
-## License
+## 📜 License
 
-MIT License
+This project is licensed under the MIT License.
