@@ -309,9 +309,9 @@ Item {
       var cmd = [
         "sh", "-c",
         '[ -d "' + dirPath + '" ] || { echo "Profile not found: ' + dirPath + '"; exit 1; }; ' +
-        '{ [ -f "' + dirPath + '/settings.json" ] && cp -f "' + dirPath + '/settings.json" "' + cfg + 'settings.json" || true; }; ' +
-        '{ [ -f "' + dirPath + '/colors.json" ] && cp -f "' + dirPath + '/colors.json" "' + cfg + 'colors.json" || true; }; ' +
-        '{ [ -f "' + dirPath + '/plugins.json" ] && cp -f "' + dirPath + '/plugins.json" "' + cfg + 'plugins.json" || true; }; ' +
+        '{ [ -f "' + dirPath + '/settings.json" ] && cp "' + dirPath + '/settings.json" "' + cfg + 'settings.json.noctalia-tmp" && mv -f "' + cfg + 'settings.json.noctalia-tmp" "' + cfg + 'settings.json" || true; }; ' +
+        '{ [ -f "' + dirPath + '/colors.json" ] && cp "' + dirPath + '/colors.json" "' + cfg + 'colors.json.noctalia-tmp" && mv -f "' + cfg + 'colors.json.noctalia-tmp" "' + cfg + 'colors.json" || true; }; ' +
+        '{ [ -f "' + dirPath + '/plugins.json" ] && cp "' + dirPath + '/plugins.json" "' + cfg + 'plugins.json.noctalia-tmp" && mv -f "' + cfg + 'plugins.json.noctalia-tmp" "' + cfg + 'plugins.json" || true; }; ' +
         'exit 0'
       ]
       _runCommand(cmd, function(code, stdout, stderr) {
