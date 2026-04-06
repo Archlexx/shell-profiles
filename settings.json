@@ -1,7 +1,7 @@
 {
-  "profilesDir": "",
+  "profilesDir": "/home/archlex/.config/noctalia/profiles",
   "icon": "wand",
-  "iconColor": "primary",
+  "iconColor": "none",
   "includeWallpapers": true,
   "lastAppliedProfile": "Darklestia",
   "backupEnabled": true,
